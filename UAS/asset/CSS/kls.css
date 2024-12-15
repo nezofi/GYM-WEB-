@@ -1,0 +1,185 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.collapse{
+    padding-right: 50px;
+    padding-left: -100px;
+    font-family: "Fira Sans", sans-serif;
+    
+}
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.classes {
+    padding: 80px 0;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+    font-size: 2.5rem;
+    color: #1a365d;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.subheading {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.class-card {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.class-card:hover {
+    transform: translateY(-5px);
+}
+
+.class-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+}
+
+.mind-body {
+    background-image: url('mind-body-small.jpg');
+}
+
+.cardio {
+    background-image: url('cardio-small.jpg');
+}
+
+.strength {
+    background-image: url('strength-small.jpg');
+}
+
+.dance {
+    background-image: url('dance-small.jpg');
+}
+
+.icon {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mind-body .icon {
+    background-color: #00B5B8;
+}
+
+.cardio .icon {
+    background-color: #FFD43B;
+}
+
+.strength .icon {
+    background-color: #E53E3E;
+}
+
+.dance .icon {
+    background-color: #38A169;
+}
+
+.icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.class-card h3 {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    .class-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .class-card h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .mind-body {
+        background-image: url('mind-body-medium.jpg');
+    }
+
+    .cardio {
+        background-image: url('cardio-medium.jpg');
+    }
+
+    .strength {
+        background-image: url('strength-medium.jpg');
+    }
+
+    .dance {
+        background-image: url('dance-medium.jpg');
+    }
+}
+
+@media (min-width: 1200px) {
+    .mind-body {
+        background-image: url('mind-body-large.jpg');
+    }
+
+    .cardio {
+        background-image: url('cardio-large.jpg');
+    }
+
+    .strength {
+        background-image: url('strength-large.jpg');
+    }
+
+    .dance {
+        background-image: url('dance-large.jpg');
+    }
+}
